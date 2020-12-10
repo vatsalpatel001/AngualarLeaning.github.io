@@ -31,6 +31,16 @@ div{
 	img{
 		max-width: 80vw;
 	}
+	.code{
+		display: inline-block;
+		width: 28vw;
+	}
+	textarea{
+		display: block;
+		resize: none;
+		width: 100%;
+		height: 200px;
+	}
 </style>
 
 
@@ -153,8 +163,82 @@ div{
 <p>&#8594; Remove all Default HTML code from app.component.html</p>
 
 </div>
+<div>
+	<p>&#8594;src\app\app.component.ts</p>
+	<p>export class AppComponent {
+  title = 'Learn';
+}</p>
+<p>&#8594;src\app\app.component.html</p>
+<p>{{title}}</p>
+<p>&#8594;Output in index.html</p>
+<p>learn</p>
+<br>
+<span>This is called Interpolation!!!!</span>
+</div>
 
+<div class="code"><span>Index.html</span><textarea><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Learn</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+</textarea></div>
+<div class="code"><span>app.component.html</span><textarea><h1>My First Edditing in angular</h1>
+{{title}}
+<h1>{{name}}</h1>
+<h1>{{6*7}}</h1>
+<h2>{{a+ar[0]}}</h2>
+<h2>{{b+ar[1]}}</h2>
+<h2>{{url}}</h2></textarea></div>
+<div class="code"><span>app.component.ts</span><textarea>import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Learn';
+  name ='vatsal';
+  a=5;
+  b='10';
+  ar=[5,6,8,9];
+  url= window.location.href;
+}
+ </textarea>
+
+</div>
+
+<div>
+	<img src="img/ref5.PNG">
+</div>
+<div>
+	<span>Ts rules</span>
+	<p>var,Let, function like prefix are not required to define variable or function</p>
+</div>
+
+<div>
+	<span>Components.....</span>
+	<p><br>&#8594;Components are independent and reusable bits of code.</p>
+	<p><br>&#8594;They serve the same purpose as JavaScript functions</p>
+	<p><br>&#8594;but work in isolation and returns HTML via a render function</p>
+	<p><br>&#8594;Components come in two types</p>
+	<p><br>&#8594;Class components and Function components</p>
+	<p><br>&#8594; Components conatins four files</p>
+	<p><br>&#8594; We alrady have root app Component</p>
+</div>
+<div>
+	<span>Genrating New Components using CLI</span>
+	<p>&#8594; ng g c userlist</p>
+<p> Here g for genrate, c for component and userlist is component name,..</p>
+</div>
 
 </body>
 </html>
