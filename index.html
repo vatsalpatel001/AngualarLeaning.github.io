@@ -11,6 +11,7 @@
 }
 body { 
 background: rgb(35,205,116);
+word-wrap: break-word;
 }
 div{
 	border: 2px outset #D0D8D7;
@@ -23,6 +24,7 @@ div{
 	span{
 		font-size: 30px;
 		font-weight: bolder;
+		display: block;
 	}
 	p{
 		font-size: 20px;
@@ -239,6 +241,174 @@ export class AppComponent {
 	<p>&#8594; ng g c userlist</p>
 <p> Here g for genrate, c for component and userlist is component name,..</p>
 </div>
+<div>
+	<span>How to use Components?</span>
+</div>
+
+<div class="code"><span>app.component.html</span><textarea>
+<h1>My First Edditing in angular</h1>
+{{title}}
+<h1>{{name}}</h1>
+<h1>{{6*7}}</h1>
+<h2>{{a+ar[0]}}</h2>
+<h2>{{b+ar[1]}}</h2>
+<h2>{{url}}</h2>
+<h1><app-userlist></app-userlist></h1>	
+</textarea></div>
+<div class="code"><span>userlist.component.html</span><textarea>
+	<p>userlist works!</p>
+</textarea></div>
+<div class="code"><span>userlist.component.ts</span><textarea>
+	import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-userlist',
+  templateUrl: './userlist.component.html',
+  styleUrls: ['./userlist.component.css']
+})
+export class UserlistComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+
+</textarea></div>
+
+<div>
+<img src="img/ref6.PNG">	
+</div>
+
+<div>
+	<span>Components selector value is used as html tag!!! ex. &#x3C;app-userlist&#x3E;&#x3C;/app-userlist&#x3E;</span>
+</div>
+
+
+
+<div>
+	<span>Steps to delete a component in Angular</span>
+<ol>
+<li>Remove the import line reference from Angular&nbsp;<code>app.module.ts</code>&nbsp;file.</li>
+<li>Remove the component declaration from @NgModule declaration array in&nbsp;<code>app.module.ts</code>&nbsp;file</li>
+<li>And then manually delete the component folder from Angular project.</li>
+<li>Finally Delete all the references of component manually from the Angular project.</li>
+</ol>
+<p>In Angular CLI,there is no command available to delete a component created by Angular CLI as of now.</p>
+<p>There is no&nbsp;ng delete component command as part of Angular CLI.</p>
+<p>If you want to know what will happen at the time of component creation. you can try&nbsp;<code>--dry--run</code>&nbsp;flag</p>
+<pre><code>ng generate component test --dry--run
+CREATE src/app/test/test.component.html (23 bytes)
+CREATE src/app/test/test.component.spec.ts (614 bytes)
+CREATE src/app/test/test.component.ts (261 bytes)
+CREATE src/app/test/test.component.css (0 bytes)
+UPDATE src/app/app.module.ts (914 bytes)
+
+NOTE: The "dryRun" flag means no changes were made.
+</code></pre>
+<p>No changes being made to the project.</p>
+</div>
+
+
+<div>
+	<span>What is Modules???</span>
+	<p><br>&#8594;In Angular, a module is a mechanism to group components, directives, pipes and services </p>
+	<p><br>&#8594;that are related, in such a way that can be combined with other modules to create an application.</p>
+</div>
+
+<div>
+<span>
+How to genrate modules & components inside modules
+</span>
+<p><br>&#8594;ng g m user</p>
+<p><br>&#8594;ng g c user/login<br><br>
+</p>
+<img src="img/ref7.PNG">
+</div>
+
+<div>
+	<span>Import and export componets from one modules to other!!!!</span>
+	
+	<div class="code"><p><br>&#8594; Step 1: exporting component in module.ts</p><span>src\app\user\user.module.ts</span><textarea>
+		import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+
+
+
+@NgModule({
+  declarations: [LoginComponent],
+  imports: [
+    CommonModule
+  ],
+  exports:[
+    LoginComponent
+  ]
+})
+export class UserModule { }
+
+	</textarea>
+
+<textarea>exports:[
+    LoginComponent
+  ]</textarea>
+
+
+</div>
+<div class="code">
+	<p><br>&#8594; Step 2:Importing module.ts</p>
+<span>src\app\app.module.ts</span>
+<textarea>import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserModule } from './user/user.module';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserlistComponent
+  ],
+  imports: [
+    BrowserModule,
+    UserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</textarea>
+<textarea>
+	import { UserModule } from './user/user.module';
+
+
+
+
+	&&
+
+
+
+	 imports: [
+    BrowserModule,
+    UserModule
+  ],
+</textarea>
+
+</div>
+
+<div class="code">
+	<p><br>&#8594; Step 3:</p>
+	&#x3C;app-login&#x3E;&#x3C;/app-login&#x3E;
+</div>
+
+
+
+</div>
+
+
 
 </body>
 </html>

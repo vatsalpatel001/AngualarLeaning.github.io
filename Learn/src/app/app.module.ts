@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UserModule } from './user/user.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { UserlistComponent } from './userlist/userlist.component';
     UserlistComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
