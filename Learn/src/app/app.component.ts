@@ -12,5 +12,12 @@ export class AppComponent {
   b='10';
   ar=[5,6,8,9];
   url= window.location.href;
+    get(a){
+    alert(a)
+  }
+  mg =5;
+  get1(){
+    alert(this.mg)
+  }
 }
  
