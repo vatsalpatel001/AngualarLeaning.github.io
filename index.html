@@ -80,10 +80,10 @@ div{
 
 <div>
 	<span>How to use Angular</span>
-	<p><br>&#8594;1.Used with NPM</p>
+	<p><br>&#8594;1.Used with NPM &#8594; <b>Angular</b></p>
 	<p><br>&#8594;2.Direct can be added to a web page with a script tag:
 
-&#x3C;script&#xA0;src=&#x22;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script&#xA0;src=&#x22;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js&#x22;&#x3E;&#x3C;/script&#x3E;  &#8594; <b>AngularJs</b>
 </p>
 <p><br>&#8594;Mostly 90% people use it with NPM</p>
 </div>
@@ -448,7 +448,7 @@ export class AppComponent {
 }
  
 	</textarea></div>
-<div class="code"><p>Hear paremeter name:a, we have property a, But out put is Vatsal</p></div>
+<div class="code"><p>Hear paremeter name:a, we have property a, But output is Vatsal</p></div>
 </div>
 <div>
 	<span>access variable inside a function</span>
@@ -458,13 +458,63 @@ export class AppComponent {
   }</textarea></p>
   <p><br>&#8594;here  if you want to make a scope variable and access throughout the component,
 
-  <br><br>&#8594;in the latest angular version you need to use this to access throughout.</p>
+  <br><br>&#8594;in the latest angular version you need to use <b>this</b> to access throughout.</p>
+</div>
+	
+
+<div>
+	<span>Types of HTML elements</span>
+<div class="code">
+	<p><b>Void elements</b></p>
+	<p><br>&#8594; only have a start tag</p>
+	<p><br>&#8594; which contains any HTML attributes.</p>
+	<p><br>&#8594; They may not contain any children, such as text or other elements,</p>
+	<p><br>&#8594; ex. area , base , br , col , command , embed , hr , img , input , keygen , link , meta , param , source , track , wbr.</p>
+</div>	
+<div class="code">
+	<p><b>Raw text elements</b></p>
+	 <p><br>&#8594; have a start tag and end tag</p>
+	 <p><br>&#8594; which contains any HTML attributes.</p>
+	 <p><br>&#8594; element must not contain other elements, only plain text.</p>
+	 <p><br>&#8594; some amount of content, including text and other element.</p>
+	 <p><br>&#8594; ex. title</p>
+</div>	
+<div class="code">
+	<p><b>Normal elements</b></p>
+	<p><br>&#8594; have both a start tag and an end tag</p>
+	<p><br>&#8594; contain any children, such as text or other elements</p>
+	<p><br>&#8594; ex. All</p>
+
+</div>	
+
+
+
+</div>
+<div>
+	<span>Important Events !..</span>
+	<p>click,keyup,keydown,keyup with enter or space, blur,mouseover etc</p>
+<div class="code"><span>app.component.html</span>
+<textarea>
+<input #box type="text" (keyup.space)="myEvent(box.value)"/>
+<br><br>
+<button (click)="myEvent(box.value)">get input box in console</button>
+<br><br>
+<div (mouseover)="myEvent('mouse over event')" style="background-color: antiquewhite;">Mouse event</div>
+</textarea>
+</div>
+<div class="code"><span>app.component.ts</span>
+<textarea>
+	 myEvent(run){
+    console.warn("shdf");
+    console.log(run);
+  }
+</textarea>
 </div>
 
 
 
 
-
+</div>
 
 
 

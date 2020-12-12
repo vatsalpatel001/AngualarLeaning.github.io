@@ -10,3 +10,10 @@
 <button (click)="get(name)">get alert</button>
 <br><br>
 <button (click)="get1()">get alert1</button>
+<br><br>
+
+<input #box type="text" (keyup.space)="myEvent(box.value)"/>
+<br><br>
+<button (click)="myEvent(box.value)">get input box in console</button>
+<br><br>
+<div (mouseover)="myEvent('mouse over event')" style="background-color: antiquewhite;">Mouse event</div>

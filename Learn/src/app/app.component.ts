@@ -18,6 +18,11 @@ export class AppComponent {
   mg =5;
   get1(){
     alert(this.mg)
+    console.log("shdf");
+  }
+  myEvent(run){
+    console.warn("shdf");
+    console.log(run);
   }
 }
  
