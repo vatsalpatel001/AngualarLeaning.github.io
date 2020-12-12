@@ -545,7 +545,7 @@ getSet(val){
 
 <br><br>&#x3C;img class=&#x22;icon&#x22; src=&#x22;https://www.sample/{{myIcon1}}&#x22;/&#x3E;
 
-<br><br>&#8594; Property Binding is used to set an element property to a non-string data value
+<br><br>&#8594;<b> Property Binding is used to set an element property to a non-string data value</b>
 
     <br><br>&#x3C;button [disabled]=&#x27;isDisable&#x27;&#x3E;Click Me&#x3C;/button&#x3E;
 
@@ -557,6 +557,88 @@ getSet(val){
 <br><br>&#8594; Button will always be disable irrespective of isDisable Property</p>
 </div>
 
+<div>
+	<span>If else condition,....</span>
+	<div class="code"><p>app.component.html</p>
+<textarea>
+	<h1>If condition ,...</h1>
+<h2 *ngIf="show else elseBlock">if ,...</h2>
+<ng-template #elseBlock>
+    <h2 >else ,...</h2>
+</ng-template>
+</textarea>
+	</div>
+	<div class="code"><p>app.component.ts</p>
+<textarea>
+	show=false;
+</textarea>
+	</div>
+	<p><br>&#8594; Ng templete is important,...</p>
+</div>
+<div>
+	<span>Typescript code not working in Javascript code and wise verse</span>
+</div>
+
+<div>
+	<span>What is ng template used for?</span>
+	<p><br>&#8594;ng-template is never rendered directly.
+	 <br>&#8594;If you add a ng-template tag to your template,
+	 <br>&#8594;it and everything inside it will be replaced by a comment.</p>
+</div>
+
+<div>
+	<span>Ng Switch case</span>
+	<p>&#x3C;div [ngSwitch]=&#x22;colors&#x22;&#x3E;
+    &#x3C;h2 *ngSwitchCase=&#x22;&#x27;red&#x27;&#x22;&#x3E;red&#x3C;/h2&#x3E;
+    &#x3C;h2 *ngSwitchCase=&#x22;&#x27;green&#x27;&#x22;&#x3E;green&#x3C;/h2&#x3E;
+&#x3C;/div&#x3E;</p>
+</div>
+
+
+<div>
+	<span>for loop</span>
+	<div class="code"><p>app.component.html</p>
+<textarea>
+	
+<br><br>
+<h1>for loop with array</h1>
+<h3 *ngFor="let item of data">{{item}}</h3>
+   <br><br>
+   <h1>for loop with object</h1>
+   <h3 *ngFor="let item of dataObj">{{item.name}} {{item.age}}</h3> 
+   <br><br>
+   <h1>for loop with object inside table</h1>
+   <table border="1">
+       <tr *ngFor="let item of dataObj">
+           <td>{{item.name}}</td>
+           <td>{{item.age}}</td>
+       </tr>
+   </table>
+
+</textarea>
+	</div>
+	<div class="code"><p>app.component.ts</p>
+<textarea>
+	data =["anil","vatsal","hitesh","ram"];
+
+dataObj =[
+  {
+  name:"ram",
+  age:25
+},
+{
+  name:"vatsal",
+  age:22
+},
+{
+  name:"hitesh",
+  age:30
+},
+]
+</textarea>
+	</div>
+</div>
+
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)
@@ -565,6 +647,7 @@ function myFunction(item, index, arr) {
   document.body.innerHTML += "<span id='"+index+"'>"+item.innerHTML+"</span><br>";
 }
 </script> -->
-
+ 
+</script>
 </body>
 </html>

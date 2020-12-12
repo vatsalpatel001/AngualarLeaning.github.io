@@ -33,3 +33,41 @@
 
 <br><br>
 <button (click)="changeValue()">Change box value</button>
+<br><br>
+<h1>If condition ,...</h1>
+<h2 *ngIf="show=='yes' else elseBlock">if ,...</h2>
+<ng-template #elseBlock>
+    <h2 >else ,...</h2>
+</ng-template>
+
+<br><br>
+<h1>if satement with ngtemplate and property binding</h1>
+<ng-template [ngIf]="colors=='red'">
+    <h1>red</h1>
+</ng-template>
+<ng-template [ngIf]="colors=='green'">
+    <h1>green</h1>
+</ng-template>
+
+<br><br>
+<h1>Switch case</h1>
+
+<div [ngSwitch]="colors">
+    <h2 *ngSwitchCase="'red'">red</h2>
+    <h2 *ngSwitchCase="'green'">green</h2>
+</div>
+
+<br><br>
+<h1>for loop with array</h1>
+<h3 *ngFor="let item of data">{{item}}</h3>
+   <br><br>
+   <h1>for loop with object</h1>
+   <h3 *ngFor="let item of dataObj">{{item.name}} {{item.age}}</h3> 
+   <br><br>
+   <h1>for loop with object inside table</h1>
+   <table border="1">
+       <tr *ngFor="let item of dataObj">
+           <td>{{item.name}}</td>
+           <td>{{item.age}}</td>
+       </tr>
+   </table>
