@@ -73,9 +73,9 @@
    </table>
 <br><br>
 <h1>Simple form</h1>
-<form #simpleform>
-    <input type="text" name="name" placeholder="enter name"/><br><br>
-    <input type="text" name="address" placeholder="enter address"/><br><br>
-    <input type="text" name="age" placeholder="enter age"/><br><br>
+<form #simpleform="ngForm" (ngSubmit)="getFormValue(simpleform.value)">
+    <input type="text" ngModel name="name" placeholder="enter name"/><br><br>
+    <input type="text" ngModel name="address" placeholder="enter address"/><br><br>
+    <input type="text" ngModel name="age" placeholder="enter age"/><br><br>
 <button>Get Value</button>
 </form>

@@ -663,7 +663,36 @@ dataObj =[
 
 </div>
 
-
+<div>
+	<span>Simple Form</span>
+	<div class="code"><p>app.module.ts</p>
+<textarea>
+	import {FormsModule} from '@angular/forms';
+	 imports: [
+    BrowserModule,
+    UserModule,
+    FormsModule
+  ],
+</textarea>
+	</div>
+	<div class="code"><p>app.component.ts</p>
+<textarea>
+	getFormValue(value){
+  console.log(value)
+}
+</textarea>
+	</div>
+	<div class="code"><p>app.component.html</p>
+<textarea>
+	<form #simpleform="ngForm" (ngSubmit)="getFormValue(simpleform.value)">
+    <input type="text" ngModel name="name" placeholder="enter name"/><br><br>
+    <input type="text" ngModel name="address" placeholder="enter address"/><br><br>
+    <input type="text" ngModel name="age" placeholder="enter age"/><br><br>
+<button>Get Value</button>
+</form>
+</textarea>
+	</div>
+</div>
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)

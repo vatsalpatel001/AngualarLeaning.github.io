@@ -52,6 +52,11 @@ dataObj =[
   age:30
 },
 ]
+
+getFormValue(value){
+  console.log(value)
+}
+
 }
 
 let x: number = 10, y = 20;
