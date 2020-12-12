@@ -24,5 +24,15 @@ export class AppComponent {
     console.warn("shdf");
     console.log(run);
   }
+
+boxvalue;
+getSet(val){
+  this.boxvalue = val;
+}
+dis = true;
+changeValue(){
+  this.name="ram";
+  this.dis=false;
+}
 }
  

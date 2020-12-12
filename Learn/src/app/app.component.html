@@ -12,8 +12,24 @@
 <button (click)="get1()">get alert1</button>
 <br><br>
 
-<input #box type="text" (keyup.space)="myEvent(box.value)"/>
+<input #box type="text" (click)="myEvent(box.value)" (keyup)="myEvent(box.value)"/>
 <br><br>
 <button (click)="myEvent(box.value)">get input box in console</button>
 <br><br>
 <div (mouseover)="myEvent('mouse over event')" style="background-color: antiquewhite;">Mouse event</div>
+<h1>One box to other div live value,..</h1>
+<br><br>
+<input type="text" (keyup)="getSet($event.target.value)"/>
+<br><br>
+<div style="background-color: beige;">{{boxvalue}}</div>
+<br><br>
+
+<h1>Interpolation Vs Property Binding</h1>
+<br><br>
+<input type="text" value={{name}} disabled={{dis}}/>
+
+<br><br>
+<input type="text" [value]="name" [disabled]="dis"/>
+
+<br><br>
+<button (click)="changeValue()">Change box value</button>
