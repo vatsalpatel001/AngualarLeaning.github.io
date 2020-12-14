@@ -693,6 +693,27 @@ dataObj =[
 </textarea>
 	</div>
 </div>
+
+<div>
+	<span>Style binding</span>
+	<div class="code"><p>Html</p>
+<textarea><h1  [style.color]="colr">style binding</h1>
+<h1  [style.color]="err?'red':'green'">style binding</h1>
+<br><br>
+<button (click)="updateclr()" > Change clr</button>
+<br><br></textarea>
+	</div>
+	<div class="code"><p>ts</p>
+<textarea>colr ="green";
+err =true;
+updateclr(){
+  this.err = !this.err;
+  this.colr="red"
+}</textarea>
+	</div>
+</div>
+
+
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)

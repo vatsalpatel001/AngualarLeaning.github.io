@@ -1,3 +1,6 @@
+<app-headder></app-headder>
+
+
 <h1>My First Edditing in angular</h1>
 {{title}}
 <h1>{{name}}</h1>
@@ -79,3 +82,14 @@
     <input type="text" ngModel name="age" placeholder="enter age"/><br><br>
 <button>Get Value</button>
 </form>
+
+<h1  style="color: red;">style binding</h1>
+<h1  [style.color]="colr">style binding</h1>
+<h1  [style.color]="err?'red':'green'">style binding</h1>
+<br><br>
+<button (click)="updateclr()" > Change clr</button>
+<br><br>
+
+
+
+<app-footer></app-footer>
