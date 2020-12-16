@@ -63,6 +63,7 @@ updateclr(){
   this.err = !this.err;
   this.colr="red"
 }
+
 }
 
 let x: number = 10, y = 20;

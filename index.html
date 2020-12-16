@@ -738,6 +738,66 @@ updateclr(){
 <br>&#8594; Ex, ngModel,ngClass,ngStyle
 	</div>
 </div>
+<div>
+	<span>Angular Material</span>
+	<p><br>&#8594; https://material.angular.io/</p>
+	<p><br>&#8594; UI component library for Angular JS.</p>
+	<p><br>&#8594; Set of components (i.e. Date Picker, Cards, Toolbar etc.)</p>
+	<p><br>&#8594; can not provide a responsive design like bootstrap does.</p>
+	<div>
+		<span>Installing,... From CLI</span>
+		<p>ng add @angular/material</p>
+	</div>
+	<div>
+		<span>Importing in app.module.ts</span>
+		<p><br>&#8594; import {MatButtonModule} from '@angular/material/button';</p>
+		<p><br>&#8594; imports: [
+    BrowserModule,
+    UserModule,
+    FormsModule,
+    NgbModule,
+    MatButtonModule,
+    BrowserAnimationsModule
+  ],</p>
+	</div>
+<div>
+	<span>copy paste code form site to componant.html</span>
+	<textarea><button mat-flat-button color="accent">Accent</button></textarea>
+</div>
+</div>
+
+<div>
+	<span>pass data parent to child</span>
+	<div>Make data in parent componant.ts
+<p><br>&#8594; data =["anil","vatsal","hitesh","ram"];</p>
+	</div>
+	<div>export data from parent componant.html
+<textarea><h1><app-userlist [hero]="data"></app-userlist></h1></textarea>
+	</div>
+
+	<div>Import data in child componant.ts
+<textarea>import { Component, OnInit,Input } from '@angular/core';
+
+@Component({
+  selector: 'app-userlist',
+  templateUrl: './userlist.component.html',
+  styleUrls: ['./userlist.component.css']
+})
+export class UserlistComponent implements OnInit {
+@Input hero
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}</textarea>
+<p>import { Component, OnInit,<b>Input </b>} from '@angular/core';</p>
+<p>@Input hero</p>
+	</div>
+	<div>Use data in child componant.html
+&#x3C;p&#x3E;{{hero}}&#x3C;/p&#x3E;
+	</div>
+</div>
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)
