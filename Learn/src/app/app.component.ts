@@ -71,10 +71,21 @@ parentCompo(val1){
 }
 samay =Date.now()
 
-constructor(private user:UserdataService)
+// constructor(private user:UserdataService)
+// {
+//   console.log(this.user.getUData());
+// }
+
+constructor(private api:UserdataService)
 {
-  console.log(this.user.getUData());
+  this.api.getAPI().subscribe(datar =>
+  {
+    console.log(datar)
+    })
 }
+
+
+
 
 }
 

@@ -962,7 +962,37 @@ getUData(){
 </textarea>
 
 		</div>
+
+		<div>
+	<span>API Call</span>
+</div>
+<div class="code"><span>src\app\userdata.service.ts</span>
+<textarea>
+	constructor(private httpt:HttpClient){}
+  getAPI(){
+ let url ="https://jsonplaceholder.typicode.com/todos";
+ return this.httpt.get(url);
+  
+}
+</textarea></div>
+
+<div class="code"><span>src\app\app.component.ts</span>
+<textarea>
+constructor(private api:UserdataService)
+{
+  this.api.getAPI().subscribe(datar =>
+  {
+    console.log(datar)
+    })
+}
+	
+</textarea></div>
 	</div>
+
+
+
+
+
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)
