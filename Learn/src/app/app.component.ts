@@ -64,12 +64,13 @@ updateclr(){
   this.colr="red"
 }
 val ="";
-
 parentCompo(val1){
   console.log(val1)
   this.val=val1;
 }
+samay =Date.now(
 
+)
 }
 
 let x: number = 10, y = 20;

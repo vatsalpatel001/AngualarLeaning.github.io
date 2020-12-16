@@ -95,4 +95,13 @@
 <h1 *ngFor="let daataa of dataObj"><app-userlist [hero1]="daataa"></app-userlist></h1>
 <h1><app-userlist (parent)="parentCompo($event)" ></app-userlist></h1>
 <h1>{{val}}</h1>
+<br><br><br>
+<h1>pipes in angular</h1>
+<h1>{{val | uppercase}}</h1>
+<h1>{{val | lowercase}}</h1>
+<h2>{{samay}}</h2>
+<h2>{{samay |date}}</h2>
+<h2>{{samay |date |slice:1}}</h2>
+<h2>{{samay |date |slice:1:5}}</h2>
+
 <app-footer></app-footer>

@@ -820,18 +820,34 @@ export class UserlistComponent implements OnInit {
 
 <div>
 	<span>Pass Data from child to parent</span>
-	<div>On child componant.ts
-<p>import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+	<div><span>On child componant.ts</span>
+<p>import { Component, OnInit,Input,<b>Output,EventEmitter</b> } from '@angular/core';
 </p>
+<p>@Output () parent:EventEmitter <any> =new EventEmitter();</p>
+	<p>ngOnInit(): void {
+    this.parent.emit("I am from child")
+  }</p>
 	</div>
-	<div>On parent componant.ts 
+	<div><span>On parent componant.ts</span> 
 		<p>val ="";
 parentCompo(val1){
   console.log(val1)
   this.val=val1;
 }</p></div>
 </div>
-
+<div>
+	<span>Pipes</span>
+	<p><br>&#8594; Pipes are simple functions,</p>
+	 <p><br>&#8594; you can accept an input value and return a transformed value.</p>
+<p><br>&#8594; Use pipes to transform strings, currency amounts, dates, and other data for display.</p>
+<p><br>&#8594; We can simply compare it with string opartion seen in javascript such as split(),Splice(),. etc</p>
+<div><textarea><h1>{{val | uppercase}}</h1>
+<h1>{{val | lowercase}}</h1>
+<h2>{{samay}}</h2>
+<h2>{{samay |date}}</h2>
+<h2>{{samay |date |slice:1}}</h2>
+<h2>{{samay |date |slice:1:5}}</h2></textarea></div>
+</div>
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)
