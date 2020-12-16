@@ -797,7 +797,41 @@ export class UserlistComponent implements OnInit {
 	<div>Use data in child componant.html
 &#x3C;p&#x3E;{{hero}}&#x3C;/p&#x3E;
 	</div>
+
+<div>
+	<span>How to pass multiple data to child component using @Input</span>
+	<p>
+		
+		 @Input()exData1;
+ @Input()exData2;
+&#x3C;ex-comp [exData1]=&#x22;exampleData1&#x22; [exData2]=&#x22;exampleData2&#x22;&#x3E;&#x3C;/ex-comp&#x3E;
+	</p>
 </div>
+
+
+<div>
+	<span>@Input array undefined if You haven't included any alises</span>
+<p><br>&#8594; @Input() data &#8594; Give error,Bcs data array is undefine</p>
+<p><br>&#8594; @Input() data:any[] = [] &#8594; No error</p>
+</div>
+
+
+</div>
+
+<div>
+	<span>Pass Data from child to parent</span>
+	<div>On child componant.ts
+<p>import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+</p>
+	</div>
+	<div>On parent componant.ts 
+		<p>val ="";
+parentCompo(val1){
+  console.log(val1)
+  this.val=val1;
+}</p></div>
+</div>
+
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)

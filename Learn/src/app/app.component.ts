@@ -63,6 +63,12 @@ updateclr(){
   this.err = !this.err;
   this.colr="red"
 }
+val ="";
+
+parentCompo(val1){
+  console.log(val1)
+  this.val=val1;
+}
 
 }
 
