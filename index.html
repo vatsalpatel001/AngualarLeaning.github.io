@@ -848,6 +848,78 @@ parentCompo(val1){
 <h2>{{samay |date |slice:1}}</h2>
 <h2>{{samay |date |slice:1:5}}</h2></textarea></div>
 </div>
+
+<div>
+	<span>AppRoutingModule</span>
+	<p><br>&#8594;AppRoutingModule &#8594; it belongs in the app-routing.module.ts in the src/app folder.</p>
+	<p><br>&#8594; Use the CLI to generate it.</p>
+	<p><br>&#8594; ng generate module app-routing --flat --module=app</p>
+<p><br>&#8594; --flat puts the file in src/app instead of its own folder.</p>
+<p><br>&#8594; --module=app tells the CLI to register it in the imports array of the AppModule</p>
+<img src="img/ref9.PNG">
+
+<div><span>src/app/app-routing.module.ts (generated)</span><textarea>import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+  declarations: []
+})
+export class AppRoutingModule { }</textarea></div>
+
+<div>
+	<span>src/app/app-routing.module.ts (updated)</span>
+	<textarea>import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HeroesComponent } from './heroes/heroes.component';
+
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }</textarea>
+</div>
+
+<div class="code"><p>src\app\app-routing.module.ts</p><textarea>
+	import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import{PageNotFoundComponent} from './page-not-found/page-not-found.component'
+
+const routes: Routes = [
+  { path: 'admin', component: AdminComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</textarea></div>
+<div class="code"><p>src\app\app.component.html</p><textarea>
+	
+	<a routerLink="admin">Admin componant</a>
+<br><br>
+<a routerLink="about">About</a>
+
+<router-outlet></router-outlet>
+</textarea></div>
+
+<div>
+	<p><br>&#8594; Here we have app componant and page not found componant</p>
+	<p><br>&#8594; But we dont have about componant</p>
+	<p><br>&#8594; So on about click we show page not found componant</p>
+	<p><br>&#8594; Here ** is wildCard</p>
+</div>
+</div>
+
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)

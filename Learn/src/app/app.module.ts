@@ -10,12 +10,17 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { AppRoutingModule } from './app-routing.module';
+import { AdminComponent } from './admin/admin.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserlistComponent,
     HeadderComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     NgbModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

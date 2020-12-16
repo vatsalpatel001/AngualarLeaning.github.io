@@ -96,12 +96,19 @@
 <h1><app-userlist (parent)="parentCompo($event)" ></app-userlist></h1>
 <h1>{{val}}</h1>
 <br><br><br>
-<h1>pipes in angular</h1>
+<h1>Pipes in angular</h1>
 <h1>{{val | uppercase}}</h1>
 <h1>{{val | lowercase}}</h1>
 <h2>{{samay}}</h2>
-<h2>{{samay |date}}</h2>
-<h2>{{samay |date |slice:1}}</h2>
-<h2>{{samay |date |slice:1:5}}</h2>
+<h2>{{samay | date}}</h2>
+<h2>{{samay | date | slice:1}}</h2>
+<h2>{{samay | date | slice:1:5}}</h2>
 
+
+<br><br>
+<h1>App Routing</h1>
+<a routerLink="admin">Admin componant</a>
+<br><br>
+<a routerLink="about">About</a>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
