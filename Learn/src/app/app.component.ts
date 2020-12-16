@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserdataService} from './userdata.service'
 
 @Component({
   selector: 'app-root',
@@ -68,9 +69,13 @@ parentCompo(val1){
   console.log(val1)
   this.val=val1;
 }
-samay =Date.now(
+samay =Date.now()
 
-)
+constructor(private user:UserdataService)
+{
+  console.log(this.user.getUData());
+}
+
 }
 
 let x: number = 10, y = 20;

@@ -919,7 +919,50 @@ export class AppRoutingModule { }
 	<p><br>&#8594; Here ** is wildCard</p>
 </div>
 </div>
+	<div>
+		<span>Services in angular</span>
+		<p><br>&#8594; allow you to define code that's accessible and reusable throughout multiple components.</p>
+		<p><br>&#8594; Servises are not componant denpendant nor module dependant</p>
 
+		<p><br>&#8594; $ ng g service userdata</p>
+		<p><br>&#8594; userdata &#8594; Servise name</p>
+
+
+		<div class="code">
+			<span>src\app\userdata.service.ts</span>
+			<textarea>import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserdataService {
+
+  constructor() { }
+getUData(){
+  return{
+    name:"Vatsal",
+    age:"23"
+  }
+}
+
+
+}
+</textarea>
+		</div>
+
+		<div class="code"><span>src\app\app.component.ts</span>
+			<textarea>
+				import {UserdataService} from './userdata.service';
+			</textarea>
+<textarea>
+	constructor(private user:UserdataService)
+{
+  console.log(this.user.getUData());
+}
+</textarea>
+
+		</div>
+	</div>
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
 divv.forEach(myFunction)
