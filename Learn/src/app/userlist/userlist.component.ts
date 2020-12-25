@@ -8,8 +8,8 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 export class UserlistComponent implements OnInit {
 @Output () parent:EventEmitter <any> =new EventEmitter();
 @Input() hero;
-@Input() hero1:any[] = [];
-// @Input() hero1;
+// @Input() hero1:any[] = [];
+@Input() hero1;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.js"></script>
+<body>
+
+<p>Change the value of the input field:</p>
+
+<div ng-app="" ng-init="myColR='0';myColG='0';myColB='0';myColA='1'">
+
+<br><br>R : <input style="background-color:{{myColR}}" ng-model="myColR" >
+<br><br>G : <input style="background-color:{{myColG}}" ng-model="myColG" >
+<br><br>B : <input style="background-color:{{myColB}}" ng-model="myColB" >
+<br><br>A : <input style="background-color:{{myColA}}" ng-model="myColA" >
+<br><br><div style="width: 100px;height: 100px;background-color:rgb({{myColR +','+myColG +','+myColB +','+myColA}});">
+</div>
+<p>AngularJS resolves the expression and returns the result.</p>
+</body>
+</html>

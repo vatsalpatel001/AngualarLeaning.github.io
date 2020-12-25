@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class UserdataService {
 
-  // constructor() { }
+//   constructor() { }
 // getUData(){
 //   return{
 //     name:"Vatsal",
@@ -19,7 +19,5 @@ constructor(private httpt:HttpClient){}
   getAPI(){
  let url ="https://jsonplaceholder.typicode.com/todos";
  return this.httpt.get(url);
-  
-}
-
+  }
 }

@@ -989,9 +989,19 @@ constructor(private api:UserdataService)
 </textarea></div>
 	</div>
 
+<div>
+	<span>Runtime Error : Cannot read property 'someProperty' of undefined</span>
+	<span>Solution : Elvis operator</span>
+	<p><br>&#8594; it’s not a concept that is specific to Angular</p>
+	<p><br>&#8594; This operator is also commonly referred to as the safe navigation operator in other languages</p>
+	<p><br>&#8594; Elvis operator, which is this little guy here: ?.</p>
+	<p><br>&#8594; The Elvis operator allows you to check for the existence an object before attempting to access its properties</p>
+	<div><p>{{someObjectThatMayNotExist?.someProperty}}</p></div>
+</div>
 
-
-
+<div>
+	<span></span>
+</div>
 
 <!-- <script type="text/javascript">
 const divv = document.querySelectorAll("div span");
