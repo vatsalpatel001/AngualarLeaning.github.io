@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular CLI commands</title>
+
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: rgb(35, 205, 116);
+			word-wrap: break-word;
+		}
+
+		div {
+			border: 2px outset #D0D8D7;
+			border-radius: 5px;
+			background-color: #FEFEFE;
+			box-shadow: 0px 0px 8px #D0D8D7;
+			margin: 20px;
+			padding: 20px;
+			/*height: 100px;*/
+			/*overflow: auto;*/
+		}
+
+		span {
+			font-size: 1.5rem;
+			font-weight: bolder;
+			display: block;
+		}
+
+		p {
+			font-size: 1.3rem;
+			/*font-weight: bolder;*/
+		}
+
+		img {
+			max-width: 80vw;
+		}
+
+		.code {
+			display: inline-block;
+			width: 28vw;
+			margin: 5px;
+		}
+
+		textarea {
+			display: block;
+			resize: none;
+			width: 100%;
+			height: 200px;
+		}
+
+		@media screen and (max-width: 992px) {
+			.code {
+				width: 95vw;
+				max-width: 95%;
+			}
+		}
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+	</style>
+
+
+</head>
+<body>
+    
+<div>
+    <span>some of the basic Angular CLI commands</span>
+    <table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>ng new &lt;project-name&gt;</code></td><td>Creates a new Angular project in a new folder.</td></tr><tr><td><code>ng serve</code></td><td>Starts a development server and watches for changes in the source code.</td></tr><tr><td><code>ng build</code></td><td>Compiles the application into an output directory for production.</td></tr><tr><td><code>ng generate component &lt;component-name&gt;</code></td><td>Generates a new component along with its files.</td></tr><tr><td><code>ng generate service &lt;service-name&gt;</code></td><td>Generates a new service along with its files.</td></tr><tr><td><code>ng generate module &lt;module-name&gt;</code></td><td>Generates a new module along with its files.</td></tr><tr><td><code>ng generate directive &lt;directive-name&gt;</code></td><td>Generates a new directive along with its files.</td></tr><tr><td><code>ng generate pipe &lt;pipe-name&gt;</code></td><td>Generates a new pipe along with its files.</td></tr><tr><td><code>ng generate class &lt;class-name&gt;</code></td><td>Generates a new class along with its files.</td></tr><tr><td><code>ng test</code></td><td>Runs unit tests using Karma and Jasmine.</td></tr><tr><td><code>ng lint</code></td><td>Runs the linter to check the code for linting errors.</td></tr><tr><td><code>ng build --prod</code></td><td>Builds the application for production, with optimization and minification.</td></tr><tr><td><code>ng help</code></td><td>Displays help information about Angular CLI commands.</td></tr></tbody></table>
+</div>
+<div>
+    <span>Here are some additional Angular CLI commands</span>
+    <table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>ng generate enum &lt;enum-name&gt;</code></td><td>Generates a new TypeScript enumeration.</td></tr><tr><td><code>ng generate interface &lt;interface-name&gt;</code></td><td>Generates a new TypeScript interface.</td></tr><tr><td><code>ng generate guard &lt;guard-name&gt;</code></td><td>Generates a new route guard.</td></tr><tr><td><code>ng generate component &lt;component-name&gt; --inline-template</code></td><td>Generates a new component with an inline template.</td></tr><tr><td><code>ng generate component &lt;component-name&gt; --inline-style</code></td><td>Generates a new component with inline styles.</td></tr><tr><td><code>ng generate component &lt;component-name&gt; --skip-tests</code></td><td>Generates a new component without test files.</td></tr><tr><td><code>ng add &lt;package-name&gt;</code></td><td>Adds a package or a library to the current project.</td></tr><tr><td><code>ng update</code></td><td>Updates the application and its dependencies.</td></tr><tr><td><code>ng config &lt;config-option&gt;</code></td><td>Retrieves or sets Angular configuration values.</td></tr><tr><td><code>ng serve --open</code></td><td>Starts the server and opens the application in a browser.</td></tr><tr><td><code>ng build --watch</code></td><td>Compiles the application and watches for changes.</td></tr><tr><td><code>ng test --watch</code></td><td>Runs unit tests and watches for changes to re-run the tests.</td></tr><tr><td><code>ng e2e</code></td><td>Runs end-to-end tests using Protractor.</td></tr><tr><td><code>ng lint &lt;project-name&gt;</code></td><td>Runs the linter on a specific project.</td></tr><tr><td><code>ng doc &lt;keyword&gt;</code></td><td>Opens the official Angular documentation for a specific keyword in the browser.</td></tr></tbody></table>
+</div>
+
+</body>
+</html>
