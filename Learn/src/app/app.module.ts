@@ -14,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {HttpClientModule} from '@angular/common/http';
-import { HooksComponent } from './hooks/hooks.component'
+import { HooksComponent } from './hooks/hooks.component';
+import { PipesExamplesComponent } from './pipes-examples/pipes-examples.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HooksComponent } from './hooks/hooks.component'
     FooterComponent,
     AdminComponent,
     PageNotFoundComponent,
-    HooksComponent
+    HooksComponent,
+    PipesExamplesComponent
   ],
   imports: [
     BrowserModule,
