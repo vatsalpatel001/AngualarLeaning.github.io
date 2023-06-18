@@ -19,11 +19,11 @@ export class AppComponent {
   mg =5;
   get1(){
     alert(this.mg)
-    console.log("shdf");
+    // console.log("shdf");
   }
   myEvent(run){
-    console.warn("shdf");
-    console.log(run);
+    // console.warn("shdf");
+    // console.log(run);
   }
 
 boxvalue;
@@ -55,8 +55,8 @@ dataObj =[
 ]
 
 getFormValue(value){
-  console.log(value)
-  console.log(value.address)
+  // console.log(value)
+  // console.log(value.address)
 }
 colr ="green";
 err =true;
@@ -66,7 +66,7 @@ updateclr(){
 }
 val ="";
 parentCompo(val1){
-  console.log(val1)
+  // console.log(val1)
   this.val=val1;
 }
 samay =Date.now()
@@ -80,7 +80,7 @@ constructor(private api:UserdataService)
 {
   this.api.getAPI().subscribe(datar =>
   {
-    console.log(datar)
+    // console.log(datar)
     })
 }
 
@@ -93,7 +93,7 @@ let x: number = 10, y = 20;
 
 if (x < y) 
 {
-    console.log('x is less than y');
+    // console.log('x is less than y');
 } 
 
 

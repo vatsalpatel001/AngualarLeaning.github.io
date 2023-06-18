@@ -13,7 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { HooksComponent } from './hooks/hooks.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http'
     HeadderComponent,
     FooterComponent,
     AdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HooksComponent
   ],
   imports: [
     BrowserModule,

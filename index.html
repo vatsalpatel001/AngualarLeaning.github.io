@@ -578,6 +578,42 @@ export class AppComponent {
 		</p>
 	</div>
 
+<div>
+	<span>constructor vs ngOnInit() </span>
+	<p>&#8594; both lifecycle hooks </p>
+	<p>&#8594;constructor :  is a <b>special method </b>that gets called when an instance of a <b>component is created.</b></p>
+	<p>&#8594;constructor : standard feature of TypeScript classes and is <b>not specific to Angular </b></p>
+	<p>&#8594;constructor :  primarily used for initializing member variables, injecting dependencies, and performing basic setup tasks. </p>
+	<p>&#8594;ngOnInit() is an Angular lifecycle hook  </p>
+	<p>&#8594;It is called after the constructor and is used to perform initialization tasks that rely on the component being fully initialized.  </p>
+
+	<textarea>
+		export class HooksComponent implements OnInit {
+			constructor() {
+			  console.log('hello', 'constructor');
+			  const element = document.getElementById('myElement');
+			  console.log(element); //null
+			  if (element) {
+				element.innerHTML = 'New content';
+			  }
+			}
+		  
+			ngOnInit(): void {
+			  console.log('hello', 'ngOnInit');
+			  const element = document.getElementById('myElement');
+			  console.log(element); //div#myElement element object
+			  if (element) {
+				element.innerHTML = 'New content';
+			  }
+			}
+		  }
+	</textarea>
+
+</div>
+
+
+
+
 
 	<div>
 		<span>Types of HTML elements</span>
