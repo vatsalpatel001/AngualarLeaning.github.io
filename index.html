@@ -61,6 +61,13 @@
 				max-width: 95%;
 			}
 		}
+
+
+td{
+	border:1px solid black;
+	padding: 5px;
+}
+
 	</style>
 
 
@@ -81,7 +88,7 @@
 
 
 	<div>
-		<span>Angular Vs AngularJs</span>
+		<span>Angular CLI Vs AngularJs</span>
 		<p><br>&#8594;AngularJs is older version First version,
 			<br>&#8594;After that(form second version) it is known as Angular
 		</p>
@@ -134,6 +141,7 @@
 		<p>&#8594; npm install -g @angular/cli@next
 
 </p>
+<p>-g: This flag stands for <b>"global"</b> and tells npm to install the package globally, making it accessible from any directory on your system.</p>
 </div>
 <div>
 <span>Check if Angular is installed!!</span>
@@ -391,6 +399,52 @@ NOTE: The "dryRun" flag means no changes were made.
 		</p>
 		<img src="img/ref7.PNG">
 	</div>
+
+<div>
+	<span>external templates and inline templates in Angular ( templateUrl: vs template: ` ` )</span>
+	<div class="code">
+		<span>external templates</span>
+		<span>app.component.ts:</span>
+	<textarea>import { Component } from '@angular/core';
+
+		@Component({
+		  selector: 'app-root',
+		  templateUrl: './app.component.html',
+		})
+		export class AppComponent {
+		  // Component logic goes here
+		}
+		</textarea>
+		<span>app.component.html:</span>
+		<textarea><h1>Welcome to My Angular App</h1>
+			<p>This is an example of an external template.</p>
+			</textarea>
+	</div>
+	<div class="code">
+		<span>Inline Template (Template Literal):</span>
+		<span>app.component.ts:</span>
+	<textarea>import { Component } from '@angular/core';
+
+		@Component({
+		  selector: 'app-root',
+		  template: `
+			<h1>Welcome to My Angular App</h1>
+			<p>This is an example of an inline template.</p>
+		  `,
+		})
+		export class AppComponent {
+		  // Component logic goes here
+		}
+		
+		</textarea>
+		
+	</div>
+	<div class="code">
+		<table><thead><tr><th>Difference</th><th>HTML in <code>.html</code> File</th><th>HTML in <code>.ts</code> File (Template)</th></tr></thead><tbody><tr><td>Location</td><td>Separate <code>.html</code> file</td><td>Within the <code>.ts</code> file</td></tr><tr><td>Separation of Concerns</td><td>Markup and logic are separate, promoting a clean separation of concerns</td><td>Markup and logic are in the same file, potentially mixing concerns</td></tr><tr><td>Maintainability</td><td>Changes in template don't affect the TypeScript code directly</td><td>Changes in template may require modifying the TypeScript code</td></tr></tbody></table>
+	</div>
+</div>
+
+
 
 	<div>
 		<span>Import and export componets from one modules to other!!!!</span>
