@@ -1300,7 +1300,23 @@ export class AppComponent{
 		<p> npx webpack-bundle-analyzer dist/learn/stats.json</p>
 	</div>
 
+<div>
+	<span>metadata and decorators</span>
+	<p> metadata is used to provide additional information about a class or component. It is defined using decorators</p>
+	<textarea>import { Component } from '@angular/core';
 
+		@Component({
+		  selector: 'app-example',
+		  templateUrl: './example.component.html',
+		  styleUrls: ['./example.component.css']
+		})
+		export class ExampleComponent {
+		  // Component logic goes here
+		}
+		</textarea>
+		<p>In the code above, the @Component decorator is used to define metadata for the ExampleComponent class. The metadata includes the selector, which defines how the component will be referenced in templates, the templateUrl specifying the HTML template file for the component, and styleUrls specifying the CSS stylesheets associated with the component.</p>
+		<p>In addition to the @Component decorator, Angular provides other decorators such as @Directive and @NgModule that define metadata for directives and modules, respectively. </p>
+</div>
 
 
 
