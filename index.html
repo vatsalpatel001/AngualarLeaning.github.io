@@ -899,8 +899,71 @@ updateclr(){
 		<span>Adding Bootstarp</span>
 		<p>&#8594; $ ng add @ng-bootstrap/ng-bootstrap &#8594; installing bootstrp </p>
 		<p>&#8594; https://ng-bootstrap.github.io/#/home &#8594; finding some command</p>
+		<p>Update angular.json file</p>
+		<div class="code">
+		<textarea>"styles": [
+			"node_modules/bootstrap/dist/css/bootstrap.min.css",
+			"src/styles.css"
+		  ],
+		  "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]</textarea>
+		</div>
 	</div>
+	<div>
+		<span>Adding fontawesome</span>
+		<p>&#8594; $ ng add @fortawesome/angular-fontawesome &#8594; installing fontawesome </p>
+		
+		
+		<div class="code">
+			<p>@import in module.ts file</p>
+		<textarea>
+			import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'</textarea>
+		</div>
+		<div class="code">
+			<p>component.ts file</p>
+		<textarea>
+			import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+
+export class FooterComponent {
+  facebookIcon = faFacebook;
+  twitterIcon = faTwitter;
+  instagramIcon = faInstagram;
+  youtubeIcon = faYoutube;
+}</textarea>
+		</div>
+		<div class="code">
+			<p>code in .html file</p>
+		<textarea>
+			<ul class="social-icons">
+				<li><a href="javascript:void(0);"><fa-icon [icon]="facebookIcon"></fa-icon></a></li>
+				<li><a href="javascript:void(0);"><fa-icon [icon]="twitterIcon"></fa-icon></a></li>
+				<li><a href="javascript:void(0);"><fa-icon [icon]="instagramIcon"></fa-icon></a></li>
+				<li><a href="javascript:void(0);"><fa-icon [icon]="youtubeIcon"></fa-icon></a></li>
+				</ul></textarea>
+		</div>
+	</div>
+	<div>
+		<span>Adding feather-icon</span>
+		<p>&#8594; $ npm i angular-feather &#8594; installing bootstrp </p>
+	
+		<div class="code">
+			<p>@import in module.ts file</p>
+		<textarea>import { FeatherModule } from 'angular-feather';
+			import { allIcons } from 'angular-feather/icons';
+
+  imports: [
+    FeatherModule.pick(allIcons), 
+  ],
+		</textarea>
+		</div>
+		<div class="code">
+			<p>component.html file</p>
+		<textarea><i-feather name="github" class="someclass"></i-feather> <br><br>
+			<i-feather name="heart" style="color: green;"></i-feather> <br><br>
+			<i-feather name="camera"></i-feather>
+		</textarea>
+		</div>
+	</div>
 	<div>
 		<span>What is Angular Directive</span>
 		<p>There are three kinds of directives in Angular:</p>
